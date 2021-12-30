@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "type": "package",
+  "dependencies": [
+    "core",
+    "eslint",
+    "eslint-typescript",
+    "prettier",
+    "typescript",
+    "typescript-node"
+  ]
+}

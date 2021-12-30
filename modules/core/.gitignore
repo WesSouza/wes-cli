@@ -1,0 +1,15 @@
+# Node & Yarn
+node_modules
+*.log*
+yarn.lock
+
+# Wes Defaults
+.wes-defaults/
+!.wes-defaults/local
+
+# Controlled Files
+./.vscode/*
+./.eslintrc
+./.prettierrc
+./package.json
+./tsconfig.json

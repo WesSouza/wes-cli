@@ -1,0 +1,38 @@
+{
+  "name": "wes-cli",
+  "version": "1.0.0",
+  "description": "CLI for all things Wes",
+  "main": "lib/index.js",
+  "scripts": {
+    "prepare": "yarn run build"
+  },
+  "keywords": [
+    "boilerplate",
+    "cli",
+    "config"
+  ],
+  "author": "Wes Souza <hey@wes.dev>",
+  "license": "MIT",
+  "bin": {
+    "wes": "bin/wes-cli.js"
+  },
+  "dependencies": {
+    "@oclif/core": "^1.0.11",
+    "@oclif/plugin-help": "^5.1.10"
+  },
+  "devDependencies": {
+    "oclif": "^2.1.0"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "oclif": {
+    "bin": "wes",
+    "commands": "./lib/commands",
+    "plugins": [
+      "@oclif/plugin-help"
+    ],
+    "topicSeparator": " ",
+    "topics": {}
+  }
+}

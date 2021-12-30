@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "build": "tsc",
+    "start:dev": "ts-node-dev"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.5",
+    "ts-node-dev": "^1.1.8"
+  }
+}

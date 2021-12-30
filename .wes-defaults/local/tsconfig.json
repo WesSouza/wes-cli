@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    "outDir": "./lib",
+    "paths": {
+      "~/*": [
+        "*"
+      ]
+    },
+    "rootDir": "./src",
+  },
+  "exclude": [
+    "lib",
+  ],
+}

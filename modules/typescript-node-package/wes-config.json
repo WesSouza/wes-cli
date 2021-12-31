@@ -2,7 +2,7 @@
   "version": 1,
   "dependencies": [
     "core",
-    "eslint",
-    "typescript"
+    "typescript",
+    "typescript-node"
   ]
 }

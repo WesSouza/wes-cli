@@ -1,4 +1,8 @@
 {
   "version": 1,
-  "dependencies": ["core", "typescript", "typescript-web"]
+  "dependencies": [
+    "core",
+    "typescript",
+    "typescript-web"
+  ]
 }

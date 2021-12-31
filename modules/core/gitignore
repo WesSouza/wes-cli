@@ -1,0 +1,13 @@
+# Node & Yarn
+node_modules
+*.log*
+
+# Wes Defaults
+/.wes-defaults/
+/!.wes-defaults/local
+
+# Controlled Files
+/.editorconfig
+/.gitignore
+/package.json
+/yarn.lock

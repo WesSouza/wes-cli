@@ -7,8 +7,9 @@
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "importHelpers": true,
-    "isolatedModules": true,
-    "lib": ["esnext"],
+    "lib": [
+      "esnext"
+    ],
     "module": "commonjs",
     "moduleResolution": "node",
     "noFallthroughCasesInSwitch": true,
@@ -26,6 +27,10 @@
     "strictPropertyInitialization": true,
     "target": "es2017"
   },
-  "include": ["**/*.ts"],
-  "exclude": ["node_modules"]
+  "include": [
+    "**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }

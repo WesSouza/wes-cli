@@ -7,6 +7,8 @@
     "eslint-typescript",
     "prettier",
     "typescript",
-    "typescript-node"
+    "typescript-node",
+    "typescript-node-package",
+    "vscode"
   ]
 }

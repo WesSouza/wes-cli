@@ -1,4 +1,8 @@
 {
   "version": 1,
-  "dependencies": ["core", "eslint", "website-react"]
+  "dependencies": [
+    "core",
+    "eslint",
+    "website-react"
+  ]
 }

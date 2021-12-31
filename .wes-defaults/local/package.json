@@ -1,10 +1,10 @@
 {
   "name": "wes-cli",
-  "version": "1.0.0",
+  "version": "1.1.1",
   "description": "CLI for all things Wes",
   "main": "lib/index.js",
   "scripts": {
-    "prepare": "yarn run build"
+    "wes": "./bin/wes-cli.js"
   },
   "keywords": [
     "boilerplate",
@@ -16,11 +16,23 @@
   "bin": {
     "wes": "bin/wes-cli.js"
   },
+  "files": [
+    "bin",
+    "lib",
+    "modules"
+  ],
   "dependencies": {
     "@oclif/core": "^1.0.11",
-    "@oclif/plugin-help": "^5.1.10"
+    "@oclif/plugin-help": "^5.1.10",
+    "@yarnpkg/lockfile": "^1.1.0",
+    "deepmerge": "^4.2.2",
+    "directory-tree": "^3.0.1",
+    "json5": "^2.2.0",
+    "lodash": "^4.17.21"
   },
   "devDependencies": {
+    "@types/lodash": "^4.14.178",
+    "@types/yarnpkg__lockfile": "^1.1.5",
     "oclif": "^2.1.0"
   },
   "engines": {

@@ -1,4 +1,6 @@
 {
   "version": 1,
-  "dependencies": ["core"]
+  "dependencies": [
+    "core"
+  ]
 }

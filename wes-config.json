@@ -9,6 +9,7 @@
     "typescript",
     "typescript-node",
     "typescript-node-package",
+    "typescript-jest",
     "vscode"
   ]
 }

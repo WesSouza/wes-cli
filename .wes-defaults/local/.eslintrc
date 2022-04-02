@@ -1,0 +1,7 @@
+{
+  "ignorePatterns": [
+    "**/bin/**",
+    "**/lib/**",
+    "**/modules/**"
+  ]
+}

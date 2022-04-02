@@ -1,6 +1,13 @@
 import * as lockfile from '@yarnpkg/lockfile';
 import deepmerge from 'deepmerge';
-import { copyFile, mkdir, readFile, stat, writeFile } from 'fs/promises';
+import {
+  copyFile,
+  mkdir,
+  readFile,
+  stat,
+  unlink,
+  writeFile,
+} from 'fs/promises';
 import JSON5 from 'json5';
 import { get, set } from 'lodash';
 import { dirname, resolve } from 'path';
@@ -34,6 +41,34 @@ const FILE_MERGERS = [
     merger: makeYarnLockMerger(),
   },
 ];
+
+export async function clearConfigFile(file: ConfigFile, atPath: string) {
+  const fileMerger = FILE_MERGERS.find(({ match }) => match.test(file.path));
+
+  if (!fileMerger) {
+    throw new Error(
+      `Unsupported config file: ${file.path} (from ${file.basePath})`,
+    );
+  }
+
+  const { path: filePath } = file;
+  const { outputFilePath } = fileMerger;
+
+  const currentPath = resolve(atPath, outputFilePath ?? filePath);
+
+  let fileStat;
+  try {
+    fileStat = await stat(currentPath);
+  } catch (error) {
+    if (nodeErrorCode(error) !== 'ENOENT') {
+      throw error;
+    }
+  }
+
+  if (fileStat) {
+    await unlink(currentPath);
+  }
+}
 
 export async function mergeConfigFile(file: ConfigFile, atPath: string) {
   const fileMerger = FILE_MERGERS.find(({ match }) => match.test(file.path));
@@ -96,6 +131,7 @@ function makePlainMerger(
   };
 }
 
+/* eslint-disable @typescript-eslint/no-explicit-any */
 function makeJsonMerger(withOptions: { sortPaths?: string[] } = {}) {
   return function mergeJson(current: string, incoming: string): string {
     const currentObject = JSON5.parse(current);
@@ -126,6 +162,7 @@ function makeJsonMerger(withOptions: { sortPaths?: string[] } = {}) {
     return JSON.stringify(mergedObject, undefined, 2);
   };
 }
+/* eslint-enable @typescript-eslint/no-explicit-any */
 
 function makeYarnLockMerger() {
   return function mergeYarnLock(current: string, incoming: string): string {

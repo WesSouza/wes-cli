@@ -4,7 +4,7 @@ import { resolve } from 'path';
 import { promisify } from 'util';
 
 import { LOCAL_OVERRIDES_LOCATION } from '../constants';
-import { mergeConfigFile } from './configFileMerger';
+import { clearConfigFile, mergeConfigFile } from './configFileMerger';
 import { findConfigFrom } from './configLocator';
 import { getAllModules, getFilePathsFor } from './configModules';
 import { parseConfig } from './configParser';
@@ -50,7 +50,14 @@ export async function generate({ workingDirectory = './' }) {
 
   const destinationPath = resolve(workingDirectory);
 
-  for await (let file of filesToMerge) {
+  const mergedFiles = new Set();
+  for await (const file of filesToMerge) {
+    if (!mergedFiles.has(file.path)) {
+      console.log(`Clearing ${file.path}`);
+      mergedFiles.add(file.path);
+      await clearConfigFile(file, destinationPath);
+    }
+
     console.log(`Merging ${file.path} from ${file.basePath}`);
     await mergeConfigFile(file, destinationPath);
   }

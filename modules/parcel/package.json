@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "build": "parcel build",
+    "start": "parcel"
+  },
+  "devDependencies": {
+    "parcel": "^2.4.1"
+  }
+}

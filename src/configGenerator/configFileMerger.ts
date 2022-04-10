@@ -40,6 +40,10 @@ const FILE_MERGERS = [
     match: /yarn.lock$/,
     merger: makeYarnLockMerger(),
   },
+  {
+    match: /\.(j|t)sx?$/,
+    merger: makeNonMerger(),
+  },
 ];
 
 export async function clearConfigFile(file: ConfigFile, atPath: string) {
@@ -163,6 +167,12 @@ function makeJsonMerger(withOptions: { sortPaths?: string[] } = {}) {
   };
 }
 /* eslint-enable @typescript-eslint/no-explicit-any */
+
+function makeNonMerger() {
+  return function nonMerge() {
+    throw new Error('This file cannot be merged');
+  };
+}
 
 function makeYarnLockMerger() {
   return function mergeYarnLock(current: string, incoming: string): string {

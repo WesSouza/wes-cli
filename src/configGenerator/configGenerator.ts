@@ -65,7 +65,7 @@ export async function generate({ workingDirectory = './' }) {
   const hasYarnLock = filesToMerge.find((file) => file.path === 'yarn.lock');
   if (hasYarnLock) {
     console.log('Running yarn install');
-    await spawn('yarn', ['install', '--ignore-optional'], {
+    await spawn('yarn', ['install'], {
       cwd: destinationPath,
       stdio: 'inherit',
     });

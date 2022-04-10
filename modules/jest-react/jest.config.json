@@ -1,0 +1,15 @@
+{
+  "globals": {
+    "ts-jest": {
+      "diagnostics": false
+    }
+  },
+  "preset": "ts-jest/presets/default-esm",
+  "setupFilesAfterEnv": [
+    "<rootDir>/jest.setup.dom.ts"
+  ],
+  "testEnvironment": "jsdom",
+  "moduleNameMapper": {
+    "\\.module\\.css$": "identity-obj-proxy"
+  }
+}

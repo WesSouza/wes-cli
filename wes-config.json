@@ -5,11 +5,11 @@
     "core",
     "eslint",
     "eslint-typescript",
+    "jest",
     "prettier",
     "typescript",
     "typescript-node",
     "typescript-node-package",
-    "typescript-jest",
     "vscode"
   ]
 }

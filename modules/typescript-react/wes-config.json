@@ -2,6 +2,7 @@
   "version": 1,
   "dependencies": [
     "core",
+    "react",
     "typescript",
     "typescript-web"
   ]

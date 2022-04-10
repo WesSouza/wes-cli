@@ -1,6 +1,13 @@
 {
   "compilerOptions": {
-    "lib": ["dom"],
-    "noEmit": true
+    "lib": [
+      "dom"
+    ],
+    "noEmit": true,
+    "plugins": [
+      {
+        "name": "typescript-plugin-css-modules"
+      }
+    ]
   }
 }

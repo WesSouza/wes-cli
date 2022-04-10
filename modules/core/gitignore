@@ -3,8 +3,10 @@ node_modules
 *.log*
 
 # Wes Defaults
-.wes-defaults/
+.wes-defaults/**
 !.wes-defaults/local
+!.wes-defaults/local/**
+.wes-defaults/local/node_modules
 
 # Controlled Files
 /.editorconfig

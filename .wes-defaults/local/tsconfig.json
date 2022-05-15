@@ -10,6 +10,9 @@
     "rootDir": "./src",
   },
   "exclude": [
+    "bin",
+    "modules",
     "lib",
+    "scripts",
   ],
 }

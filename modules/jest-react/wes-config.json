@@ -2,7 +2,10 @@
   "version": 1,
   "dependencies": [
     "core",
-    "react",
+    [
+      "react",
+      "react-lib"
+    ],
     "jest",
     "typescript"
   ]

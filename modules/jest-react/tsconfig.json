@@ -1,0 +1,5 @@
+{
+  "exclude": [
+    "jest.setup.dom.ts"
+  ]
+}

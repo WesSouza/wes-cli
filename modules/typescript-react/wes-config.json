@@ -2,8 +2,14 @@
   "version": 1,
   "dependencies": [
     "core",
-    "react",
     "typescript",
-    "typescript-web"
+    [
+      "react",
+      "react-lib"
+    ],
+    [
+      "typescript-node-lib",
+      "typescript-web"
+    ]
   ]
 }

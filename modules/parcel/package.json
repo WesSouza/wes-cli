@@ -4,6 +4,6 @@
     "start": "parcel"
   },
   "devDependencies": {
-    "parcel": "^2.5.0"
+    "parcel": "^2.6.2"
   }
 }

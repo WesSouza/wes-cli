@@ -24,11 +24,11 @@
     "modules"
   ],
   "dependencies": {
-    "@oclif/core": "^1.8.1",
+    "@oclif/core": "^1.9.5",
     "@oclif/plugin-help": "^5.1.11",
     "@yarnpkg/lockfile": "^1.1.0",
     "deepmerge": "^4.2.2",
-    "directory-tree": "^3.2.1",
+    "directory-tree": "^3.3.0",
     "json5": "^2.2.0",
     "lodash": "^4.17.21"
   },

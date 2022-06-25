@@ -24,12 +24,25 @@ export async function generate({ workingDirectory = './' }) {
       throw new Error(`Invalid dependency: ${dependencyName}`);
     }
 
-    dependency.config.dependencies?.forEach((dependencyDependencyName) => {
-      assert(
-        config.dependencies?.includes(dependencyDependencyName),
-        `Missing dependency for ${dependencyName}: ${dependencyDependencyName}`,
-      );
-    });
+    dependency.config.dependencies?.forEach(
+      (dependencyDependencyOrDependenciesNames) => {
+        dependencyDependencyOrDependenciesNames = Array.isArray(
+          dependencyDependencyOrDependenciesNames,
+        )
+          ? dependencyDependencyOrDependenciesNames
+          : [dependencyDependencyOrDependenciesNames];
+
+        assert(
+          dependencyDependencyOrDependenciesNames.some(
+            (dependencyDependencyName) =>
+              config.dependencies?.includes(dependencyDependencyName),
+          ),
+          `Missing dependency for ${dependencyName}: ${dependencyDependencyOrDependenciesNames.join(
+            ', ',
+          )}`,
+        );
+      },
+    );
 
     dependency.filePaths.forEach((filePath) =>
       filesToMerge.push({

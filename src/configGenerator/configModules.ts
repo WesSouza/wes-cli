@@ -6,11 +6,11 @@ import { CONFIG_FILENAME, MODULES_PATH } from '../constants';
 import { nodeErrorCode } from '../utils/errors';
 import { escapeRegExp } from '../utils/regexp';
 import { parseModuleConfig } from './configModuleParser';
-import { Config } from './configTypes';
+import { ModuleConfig } from './configTypes';
 
 export interface ConfigModule {
   name: string;
-  config: Config;
+  config: ModuleConfig;
   basePath: string;
   filePaths: string[];
 }

@@ -9,7 +9,7 @@
     "prettier",
     "typescript",
     "typescript-node",
-    "typescript-node-package",
+    "typescript-node-lib",
     "vscode"
   ]
 }

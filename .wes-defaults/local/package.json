@@ -5,6 +5,7 @@
   "main": "lib/index.js",
   "scripts": {
     "upgrade-module-dependencies": "ts-node ./scripts/upgradeModuleDependencies.ts",
+    "lint": "eslint --no-eslintrc -c .eslintrc .",
     "wes": "./bin/wes-cli.js"
   },
   "keywords": [

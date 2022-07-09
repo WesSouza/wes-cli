@@ -42,7 +42,7 @@ export async function getModuleConfigFor(path: string) {
 
 export async function getFilePathsFor(path: string) {
   const exclude = [
-    new RegExp(`\/${escapeRegExp(CONFIG_FILENAME)}\$`),
+    new RegExp(`\/${escapeRegExp(CONFIG_FILENAME)}$`),
     /\/node_modules\/?$/,
   ];
   const moduleTree = directoryTree(path, { exclude });

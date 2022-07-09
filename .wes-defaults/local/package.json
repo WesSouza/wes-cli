@@ -1,6 +1,6 @@
 {
   "name": "wes-cli",
-  "version": "1.7.0",
+  "version": "1.7.1",
   "description": "CLI for all things Wes",
   "main": "lib/index.js",
   "scripts": {

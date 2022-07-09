@@ -3,6 +3,9 @@
   "dependencies": [
     "core",
     "eslint",
-    "website-react"
+    [
+      "react",
+      "react-lib"
+    ]
   ]
 }

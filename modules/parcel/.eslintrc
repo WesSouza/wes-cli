@@ -1,0 +1,6 @@
+{
+  "ignorePatterns": [
+    "**/.parcel-cache/**",
+    "**/dist/**"
+  ]
+}

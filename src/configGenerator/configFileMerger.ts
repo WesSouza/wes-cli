@@ -44,6 +44,10 @@ const FILE_MERGERS = [
     match: /\.(j|t)sx?$/,
     merger: makeNonMerger(),
   },
+  {
+    match: /\.ya?ml$/,
+    merger: makeNonMerger(),
+  },
 ];
 
 export async function clearConfigFile(file: ConfigFile, atPath: string) {

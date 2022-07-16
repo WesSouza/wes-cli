@@ -44,6 +44,7 @@ export async function getFilePathsFor(path: string) {
   const exclude = [
     new RegExp(`\/${escapeRegExp(CONFIG_FILENAME)}$`),
     /\/node_modules\/?$/,
+    /\/README/,
   ];
   const moduleTree = directoryTree(path, { exclude });
   const flatFiles = flatDirectoryTree(moduleTree);

@@ -1,6 +1,6 @@
 # wes-cli
 
-[![CI Tests status badge](https://github.com/WesSouza/wes-cli/actions/workflows/main.yml/badge.svg)](https://github.com/WesSouza/wes-cli/actions/workflows/main.yml?query=branch%3Amain) [![npm version](https://badge.fury.io/js/wes-cli.svg)](https://www.npmjs.com/package/wes-cli)
+[![CI Tests status badge](https://github.com/WesSouza/wes-cli/actions/workflows/lint-typecheck-test-build.yml/badge.svg)](https://github.com/WesSouza/wes-cli/actions/workflows/lint-typecheck-test-build.yml?query=branch%3Amain) [![npm version](https://badge.fury.io/js/wes-cli.svg)](https://www.npmjs.com/package/wes-cli)
 
 Collection of CLI commands that make my life easier, such as maintaining configuration files across different projects. It might help you too!
 

@@ -5,6 +5,8 @@
     "core",
     "eslint",
     "eslint-typescript",
+    "github-codeql",
+    "github-lint-typecheck-test-build",
     "jest",
     "prettier",
     "typescript",

@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "dependencies": [
+    "core",
+    "eslint",
+    [
+      "jest",
+      "jest-react"
+    ],
+    "prettier",
+    "typescript"
+  ]
+}

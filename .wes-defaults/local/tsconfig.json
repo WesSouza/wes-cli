@@ -1,6 +1,8 @@
 {
   "compilerOptions": {
     "baseUrl": "./",
+    "module": "CommonJS",
+    "moduleResolution": "Node",
     "outDir": "lib",
     "rootDir": "src",
   },

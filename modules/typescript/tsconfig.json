@@ -8,10 +8,10 @@
     "forceConsistentCasingInFileNames": true,
     "importHelpers": true,
     "lib": [
-      "esnext"
+      "ESNext"
     ],
-    "module": "commonjs",
-    "moduleResolution": "node",
+    "module": "ESNext",
+    "moduleResolution": "Node16",
     "noFallthroughCasesInSwitch": true,
     "noImplicitAny": true,
     "noImplicitReturns": true,
@@ -20,12 +20,12 @@
     "noUnusedParameters": true,
     "resolveJsonModule": true,
     "skipLibCheck": true,
-    "sourceMap": false,
+    "sourceMap": true,
     "strict": true,
     "strictFunctionTypes": true,
     "strictNullChecks": true,
     "strictPropertyInitialization": true,
-    "target": "es2017"
+    "target": "ES2017"
   },
   "include": [
     "**/*.ts"

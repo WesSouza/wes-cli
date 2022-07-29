@@ -1,5 +1,5 @@
 {
   "ignorePatterns": [
-    "**/lib/**"
+    "**/dist/**"
   ]
 }

@@ -3,7 +3,8 @@
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
   "scripts": {
-    "build": "rollup -c"
+    "build": "rollup -c",
+    "prepare": "yarn run build"
   },
   "devDependencies": {
     "@rollup/plugin-typescript": "^8.3.4",

@@ -1,11 +1,10 @@
 {
   "name": "wes-cli",
-  "version": "1.8.3",
+  "version": "1.9.0",
   "description": "CLI for all things Wes",
   "main": "lib/index.js",
   "scripts": {
     "upgrade-module-dependencies": "ts-node ./scripts/upgradeModuleDependencies.ts",
-    "lint": "eslint --no-eslintrc -c .eslintrc .",
     "wes": "./bin/wes-cli.js"
   },
   "keywords": [

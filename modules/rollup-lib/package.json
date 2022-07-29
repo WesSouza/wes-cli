@@ -1,0 +1,15 @@
+{
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "rollup -c"
+  },
+  "devDependencies": {
+    "@rollup/plugin-typescript": "^8.3.4",
+    "esbuild": "^0.14.51",
+    "rollup": "^2.77.2",
+    "rollup-plugin-esbuild": "^4.9.1",
+    "rollup-plugin-replace": "^2.2.0"
+  }
+}

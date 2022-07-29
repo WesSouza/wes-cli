@@ -6,10 +6,6 @@
     [
       "react",
       "react-lib"
-    ],
-    [
-      "typescript-node-lib",
-      "typescript-web"
     ]
   ]
 }

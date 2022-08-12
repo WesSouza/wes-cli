@@ -20,7 +20,7 @@ async function upgradeDependenciesFor(module: ConfigModule) {
 
   console.log(`Upgrading dependencies from "${name}"`);
   console.log(`-- Installing...`);
-  await exec('yarn install', {
+  await exec('yarn install --ignore-scripts', {
     cwd: basePath,
   });
 

@@ -18,6 +18,7 @@
   "bin": {
     "wes": "bin/wes-cli.js"
   },
+  "type": "commonjs",
   "files": [
     "bin",
     "lib",

@@ -1,6 +1,18 @@
 {
   "version": 1,
   "dependencies": [
-    "core"
+    "core",
+    "eslint",
+    "typescript",
+    [
+      "jest",
+      "vite-vitest-react",
+      "vitest"
+    ],
+    [
+      "parcel",
+      "rollup-lib",
+      "typescript-node-lib"
+    ]
   ]
 }

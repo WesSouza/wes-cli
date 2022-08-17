@@ -1,0 +1,14 @@
+{
+  "scripts": {
+    "coverage": "vitest run --coverage",
+    "test": "vitest run",
+    "test:ui": "vitest --ui",
+    "test:watch": "vitest"
+  },
+  "devDependencies": {
+    "@vitest/coverage-c8": "^0.22.0",
+    "@vitest/ui": "^0.22.0",
+    "vite": "^3.0.8",
+    "vitest": "^0.22.0"
+  }
+}

@@ -4,6 +4,7 @@
   "description": "CLI for all things Wes",
   "main": "lib/index.js",
   "scripts": {
+    "lint": "eslint --config .eslintrc --no-eslintrc .",
     "upgrade-module-dependencies": "ts-node ./scripts/upgradeModuleDependencies.ts",
     "wes": "./bin/wes-cli.js"
   },

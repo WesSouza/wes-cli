@@ -1,3 +1,5 @@
+import { describe, expect, it } from 'vitest';
+
 import { instanceOfNodeError, nodeErrorCode } from './errors';
 
 class NodeError extends Error {

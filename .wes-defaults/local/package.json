@@ -24,7 +24,7 @@
     "modules"
   ],
   "dependencies": {
-    "@oclif/core": "^1.13.10",
+    "@oclif/core": "^1.14.1",
     "@oclif/plugin-help": "^5.1.11",
     "@yarnpkg/lockfile": "^1.1.0",
     "deepmerge": "^4.2.2",
@@ -33,7 +33,7 @@
     "lodash": "^4.17.21"
   },
   "devDependencies": {
-    "@types/lodash": "^4.14.182",
+    "@types/lodash": "^4.14.183",
     "@types/yarnpkg__lockfile": "^1.1.5",
     "oclif": "^3.1.2"
   },

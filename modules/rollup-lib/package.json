@@ -8,9 +8,9 @@
   },
   "devDependencies": {
     "@rollup/plugin-typescript": "^8.3.4",
-    "esbuild": "^0.15.1",
-    "rollup": "^2.77.3",
-    "rollup-plugin-esbuild": "^4.9.1",
+    "esbuild": "^0.15.5",
+    "rollup": "^2.78.0",
+    "rollup-plugin-esbuild": "^4.9.3",
     "rollup-plugin-replace": "^2.2.0"
   }
 }

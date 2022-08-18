@@ -1,15 +1,11 @@
 {
   "compilerOptions": {
-    "baseUrl": "./",
     "module": "CommonJS",
-    "moduleResolution": "Node",
-    "outDir": "lib",
-    "rootDir": "src",
+    "moduleResolution": "Node"
   },
   "exclude": [
     "bin",
     "modules",
-    "lib",
     "scripts",
   ],
 }

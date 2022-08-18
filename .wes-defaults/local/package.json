@@ -2,7 +2,6 @@
   "name": "wes-cli",
   "version": "1.10.0",
   "description": "CLI for all things Wes",
-  "main": "lib/index.js",
   "scripts": {
     "lint": "eslint --config .eslintrc --no-eslintrc .",
     "upgrade-module-dependencies": "ts-node ./scripts/upgradeModuleDependencies.ts",
@@ -21,7 +20,7 @@
   "type": "commonjs",
   "files": [
     "bin",
-    "lib",
+    "dist",
     "modules"
   ],
   "dependencies": {
@@ -43,7 +42,7 @@
   },
   "oclif": {
     "bin": "wes",
-    "commands": "./lib/commands",
+    "commands": "./dist/commands",
     "plugins": [
       "@oclif/plugin-help"
     ],

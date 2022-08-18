@@ -6,13 +6,18 @@ export default [
     input: './src/index.ts',
     output: [
       {
-        file: './dist/index.js',
+        dir: './dist',
         format: 'cjs',
+        exports: 'auto',
+        preserveModules: true,
         sourcemap: true,
       },
       {
-        file: './dist/index.mjs',
+        dir: './dist',
+        entryFileNames: '[name].mjs',
+        exports: 'auto',
         format: 'es',
+        preserveModules: true,
         sourcemap: true,
       },
     ],

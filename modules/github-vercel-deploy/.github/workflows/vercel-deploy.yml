@@ -21,7 +21,7 @@ jobs:
 
       - name: Install wes-cli
         run: |
-          npm i -g wes-cli@1.10.1
+          npm i -g wes-cli@1.10.2
           wes install
 
       - name: Install vercel

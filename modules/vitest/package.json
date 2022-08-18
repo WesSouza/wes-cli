@@ -2,8 +2,9 @@
   "scripts": {
     "coverage": "vitest run --coverage",
     "test": "vitest run",
-    "test:ui": "vitest --ui",
-    "test:watch": "vitest"
+    "test:ci": "vitest run --coverage",
+    "test:ui": "vitest watch --ui",
+    "test:watch": "vitest watch"
   },
   "devDependencies": {
     "@vitest/coverage-c8": "^0.22.0",

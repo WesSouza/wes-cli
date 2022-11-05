@@ -8,13 +8,13 @@ export default [
       {
         dir: './dist',
         format: 'cjs',
+        entryFileNames: '[name].cjs',
         exports: 'auto',
         preserveModules: true,
         sourcemap: true,
       },
       {
         dir: './dist',
-        entryFileNames: '[name].mjs',
         exports: 'auto',
         format: 'es',
         preserveModules: true,

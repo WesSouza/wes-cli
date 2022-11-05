@@ -1,7 +1,7 @@
 import assert from 'assert';
 import { readFile } from 'fs/promises';
 
-import { Config, ModuleConfig } from './configTypes';
+import { Config, ModuleConfig } from './configTypes.js';
 
 export function parse(
   configFilePath: string,

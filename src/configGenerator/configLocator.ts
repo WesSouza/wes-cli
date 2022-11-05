@@ -2,8 +2,8 @@ import assert from 'assert';
 import { stat } from 'fs/promises';
 import { dirname, resolve } from 'path';
 
-import { CONFIG_FILENAME } from '../constants';
-import { nodeErrorCode } from '../utils/errors';
+import { CONFIG_FILENAME } from '../constants.js';
+import { nodeErrorCode } from '../utils/errors.js';
 
 async function isDir(path: string) {
   try {

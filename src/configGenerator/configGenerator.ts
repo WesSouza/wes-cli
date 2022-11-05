@@ -3,12 +3,12 @@ import { spawn as spawnNonPromise } from 'child_process';
 import { resolve } from 'path';
 import { promisify } from 'util';
 
-import { LOCAL_OVERRIDES_LOCATION } from '../constants';
-import { clearConfigFile, mergeConfigFile } from './configFileMerger';
-import { findConfigFrom } from './configLocator';
-import { getAllModules, getFilePathsFor } from './configModules';
-import { parseConfig } from './configParser';
-import { ConfigFile } from './configTypes';
+import { LOCAL_OVERRIDES_LOCATION } from '../constants.js';
+import { clearConfigFile, mergeConfigFile } from './configFileMerger.js';
+import { findConfigFrom } from './configLocator.js';
+import { getAllModules, getFilePathsFor } from './configModules.js';
+import { parseConfig } from './configParser.js';
+import { ConfigFile } from './configTypes.js';
 
 export async function generate({ workingDirectory = './' }) {
   const spawn = promisify(spawnNonPromise);

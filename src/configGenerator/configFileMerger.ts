@@ -1,4 +1,4 @@
-import * as lockfile from '@yarnpkg/lockfile';
+import lockfile from '@yarnpkg/lockfile';
 import deepmerge from 'deepmerge';
 import {
   copyFile,
@@ -9,11 +9,11 @@ import {
   writeFile,
 } from 'fs/promises';
 import JSON5 from 'json5';
-import { get, set } from 'lodash';
+import lodash from 'lodash';
 import { dirname, resolve } from 'path';
 
-import { nodeErrorCode } from '../utils/errors';
-import { ConfigFile } from './configTypes';
+import { nodeErrorCode } from '../utils/errors.js';
+import { ConfigFile } from './configTypes.js';
 
 const FILE_MERGERS = [
   {
@@ -151,7 +151,7 @@ function makeJsonMerger(withOptions: { sortPaths?: string[] } = {}) {
 
     if (sortPaths) {
       sortPaths.forEach((sortPath) => {
-        const value = get(mergedObject, sortPath);
+        const value = lodash.get(mergedObject, sortPath);
         const newValue: any = {};
 
         if (!value) {
@@ -163,7 +163,7 @@ function makeJsonMerger(withOptions: { sortPaths?: string[] } = {}) {
           .forEach((key) => {
             newValue[key] = value[key];
           });
-        set(mergedObject, sortPath, newValue);
+        lodash.set(mergedObject, sortPath, newValue);
       });
     }
 

@@ -1,13 +1,14 @@
 import { exec as execNode } from 'child_process';
 import { existsSync } from 'fs';
-import { resolve } from 'path';
+import { dirname, resolve } from 'path';
+import { fileURLToPath } from 'url';
 import { promisify } from 'util';
 
 import {
   ConfigModule,
   getAllModules,
-} from '../src/configGenerator/configModules';
-import { LOCAL_OVERRIDES_LOCATION } from '../src/constants';
+} from '../src/configGenerator/configModules.js';
+import { LOCAL_OVERRIDES_LOCATION } from '../src/constants.js';
 
 const exec = promisify(execNode);
 
@@ -41,7 +42,11 @@ async function upgradeDependenciesFor(module: ConfigModule) {
     await upgradeDependenciesFor(module);
   }
 
-  const localBasePath = resolve(__dirname, '../', LOCAL_OVERRIDES_LOCATION);
+  const localBasePath = resolve(
+    dirname(fileURLToPath(import.meta.url)),
+    '../',
+    LOCAL_OVERRIDES_LOCATION,
+  );
   const localYarnPath = resolve(localBasePath, './yarn.lock');
   const localYarnExists = existsSync(localYarnPath);
 

@@ -2,11 +2,11 @@ import directoryTree from 'directory-tree';
 import { opendir, stat } from 'fs/promises';
 import { basename, relative, resolve } from 'path';
 
-import { CONFIG_FILENAME, MODULES_PATH } from '../constants';
-import { nodeErrorCode } from '../utils/errors';
-import { escapeRegExp } from '../utils/regexp';
-import { parseModuleConfig } from './configModuleParser';
-import { ModuleConfig } from './configTypes';
+import { CONFIG_FILENAME, MODULES_PATH } from '../constants.js';
+import { nodeErrorCode } from '../utils/errors.js';
+import { escapeRegExp } from '../utils/regexp.js';
+import { parseModuleConfig } from './configModuleParser.js';
+import { ModuleConfig } from './configTypes.js';
 
 export interface ConfigModule {
   name: string;

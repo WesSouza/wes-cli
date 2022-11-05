@@ -1,8 +1,9 @@
 #!/usr/bin/env node
 
-const oclif = require('@oclif/core');
+import oclif from '@oclif/core';
 
+// Start the CLI
 oclif
-  .run()
-  .then(require('@oclif/core/flush'))
-  .catch(require('@oclif/core/handle'));
+  .run(process.argv.slice(2), import.meta.url)
+  .then(oclif.flush)
+  .catch(oclif.Errors.handle);

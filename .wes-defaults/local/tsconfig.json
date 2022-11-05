@@ -1,11 +1,15 @@
 {
   "compilerOptions": {
-    "module": "CommonJS",
-    "moduleResolution": "Node"
+    "module": "ES2020",
+    "moduleResolution": "Node",
+    "target": "ES2020"
   },
   "exclude": [
     "bin",
     "modules",
     "scripts",
   ],
+  "ts-node": {
+    "esm": true
+  }
 }

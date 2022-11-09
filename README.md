@@ -28,6 +28,21 @@ This project is built using itself, so you can peek at
 
 You can see a list of dependencies as folders on [modules](./modules).
 
+## Configuration
+
+### wes-config.json
+
+Supported properties:
+
+* All versions:
+  * `version: number`: Configuration version (latest is `2`)
+  * `dependencies: string[]`: List of modules to import configurations files
+    from. See [modules](./modules) for all supported dependencies.
+* Version > 2:
+  * `localOverrides?: string[]`: List of file paths from `.wes-defaults/local`
+    that should be kept as is, not merging with any module's version. Paths
+    shouldn't include a leading /.
+
 ## License
 
 MIT, https://wes.dev/LICENSE.txt

@@ -1,5 +1,6 @@
 export interface Config {
   dependencies?: string[];
+  localOverrides?: string[];
   version: number;
 }
 

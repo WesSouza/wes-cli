@@ -26,7 +26,12 @@ export async function parse(
 
   assert('version' in config, 'Missing config version');
 
-  assert(config.version === 1, `Unsupported config version: ${config.version}`);
+  const { version } = config;
+
+  assert(
+    version >= 1 && version <= 2,
+    `Unsupported config version: ${version}`,
+  );
 
   if ('dependencies' in config) {
     assert(
@@ -35,6 +40,19 @@ export async function parse(
           (options.type === 'module' &&
             arrayOfStringsOfStrings(config.dependencies))),
       '`dependencies` must be an array of strings',
+    );
+  }
+
+  if ('localOverrides' in config) {
+    assert(
+      version >= 2,
+      `localOverrides requires version 2 or higher, got ${version}`,
+    );
+
+    assert(
+      Array.isArray(config.localOverrides) &&
+        arrayOfStrings(config.localOverrides),
+      '`localOverrides` must be an array of strings',
     );
   }
 

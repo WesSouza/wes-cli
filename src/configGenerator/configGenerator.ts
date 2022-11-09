@@ -44,12 +44,17 @@ export async function generate({ workingDirectory = './' }) {
       },
     );
 
-    dependency.filePaths.forEach((filePath) =>
+    dependency.filePaths.forEach((filePath) => {
+      if (config.localOverrides?.includes(filePath)) {
+        console.log(`Skipping ${dependency.name}'s ${filePath}`);
+        return;
+      }
+
       filesToMerge.push({
         basePath: dependency.basePath,
         path: filePath,
-      }),
-    );
+      });
+    });
   });
 
   const localMergesBasePath = resolve(workingDirectory, LOCAL_FILES_LOCATION);

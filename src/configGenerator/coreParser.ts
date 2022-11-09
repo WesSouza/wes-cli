@@ -1,6 +1,7 @@
 import assert from 'assert';
 import { readFile } from 'fs/promises';
 
+import { arrayOfStrings, arrayOfStringsOfStrings } from '../utils/array.js';
 import { Config, ModuleConfig } from './configTypes.js';
 
 export function parse(
@@ -28,24 +29,6 @@ export async function parse(
   assert(config.version === 1, `Unsupported config version: ${config.version}`);
 
   if ('dependencies' in config) {
-    function arrayOfStrings(input: unknown): input is string[] {
-      return (
-        Array.isArray(input) &&
-        input.every((element) => typeof element === 'string')
-      );
-    }
-
-    function arrayOfStringsOfStrings(
-      input: unknown,
-    ): input is (string | string[])[] {
-      return (
-        Array.isArray(input) &&
-        input.every(
-          (element) => typeof element === 'string' || arrayOfStrings(element),
-        )
-      );
-    }
-
     assert(
       Array.isArray(config.dependencies) &&
         ((options.type === 'local' && arrayOfStrings(config.dependencies)) ||

@@ -3,7 +3,7 @@ import { spawn as spawnNonPromise } from 'child_process';
 import { resolve } from 'path';
 import { promisify } from 'util';
 
-import { LOCAL_OVERRIDES_LOCATION } from '../constants.js';
+import { LOCAL_FILES_LOCATION } from '../constants.js';
 import { clearConfigFile, mergeConfigFile } from './configFileMerger.js';
 import { findConfigFrom } from './configLocator.js';
 import { getAllModules, getFilePathsFor } from './configModules.js';
@@ -52,13 +52,10 @@ export async function generate({ workingDirectory = './' }) {
     );
   });
 
-  const localOverridesBasePath = resolve(
-    workingDirectory,
-    LOCAL_OVERRIDES_LOCATION,
-  );
-  const localOverrideFilePaths = await getFilePathsFor(localOverridesBasePath);
-  localOverrideFilePaths.forEach((filePath) =>
-    filesToMerge.push({ basePath: localOverridesBasePath, path: filePath }),
+  const localMergesBasePath = resolve(workingDirectory, LOCAL_FILES_LOCATION);
+  const localMergeFilePaths = await getFilePathsFor(localMergesBasePath);
+  localMergeFilePaths.forEach((filePath) =>
+    filesToMerge.push({ basePath: localMergesBasePath, path: filePath }),
   );
 
   const destinationPath = resolve(workingDirectory);

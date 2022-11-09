@@ -8,7 +8,7 @@ import {
   ConfigModule,
   getAllModules,
 } from '../src/configGenerator/configModules.js';
-import { LOCAL_OVERRIDES_LOCATION } from '../src/constants.js';
+import { LOCAL_FILES_LOCATION } from '../src/constants.js';
 
 const exec = promisify(execNode);
 
@@ -45,14 +45,14 @@ async function upgradeDependenciesFor(module: ConfigModule) {
   const localBasePath = resolve(
     dirname(fileURLToPath(import.meta.url)),
     '../',
-    LOCAL_OVERRIDES_LOCATION,
+    LOCAL_FILES_LOCATION,
   );
   const localYarnPath = resolve(localBasePath, './yarn.lock');
   const localYarnExists = existsSync(localYarnPath);
 
   if (localYarnExists) {
     await upgradeDependenciesFor({
-      name: LOCAL_OVERRIDES_LOCATION,
+      name: LOCAL_FILES_LOCATION,
       config: { version: 0 },
       basePath: localBasePath,
       filePaths: ['package.json', 'yarn.lock'],

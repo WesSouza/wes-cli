@@ -83,6 +83,7 @@ export async function generate({ workingDirectory = './' }) {
     await spawn('yarn', ['install'], {
       cwd: destinationPath,
       stdio: 'inherit',
+      shell: true,
     });
   }
 

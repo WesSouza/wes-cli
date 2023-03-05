@@ -21,6 +21,7 @@ export async function findConfigFrom(path: string) {
   );
   assert(await isDir(path), '`path` must be a directory');
 
+  let prevPath = null;
   let currentPath = resolve(path);
   do {
     try {
@@ -35,8 +36,9 @@ export async function findConfigFrom(path: string) {
       }
     }
 
-    currentPath = dirname(currentPath);
-  } while (currentPath !== '.' && currentPath !== '/');
+    prevPath = currentPath;
+    currentPath = dirname(prevPath);
+  } while (currentPath != prevPath);
 
   throw new Error(`Unable to locate ${CONFIG_FILENAME} on the current path`);
 }

@@ -1,6 +1,6 @@
 {
   "name": "wes-cli",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "CLI for all things Wes",
   "scripts": {
     "lint": "eslint --config .eslintrc --no-eslintrc .",

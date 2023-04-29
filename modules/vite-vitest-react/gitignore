@@ -1,0 +1,4 @@
+/coverage
+/tsconfig.node.json
+/vite.config.ts
+/vitest.setup.ts
